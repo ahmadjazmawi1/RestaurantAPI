@@ -1,0 +1,22 @@
+html 
+    head 
+        
+        
+         
+    
+    body#main
+        if(user.loggedIn==true)
+            include Header_loggedIn 
+        else
+            include Header_loggedOut
+          
+        p#u Username
+        input#user(type='text' name='user') 
+        br
+        br
+        p#u Password
+        input#pass(type='text' name='pass')
+        br
+        br
+        input#submit(type='button' value='Submit')
+        script(src="clientLogin.js")

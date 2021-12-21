@@ -1,0 +1,22 @@
+html 
+    head 
+        
+        
+         
+    
+    body#main
+        
+        if(user.loggedIn==true)
+            include Header_loggedIn
+        else   
+            include Header_loggedOut
+        h1#s Users
+            
+    
+        ul#usersUL
+            each u in users 
+                li    
+                    a#header(href="/users/"+u._id) #{u.username}
+                br 
+
+        

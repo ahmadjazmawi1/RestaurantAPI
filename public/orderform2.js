@@ -1,0 +1,1 @@
+body.addEventListener("load", init)

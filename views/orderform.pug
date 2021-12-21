@@ -1,0 +1,20 @@
+html 
+    head 
+        include Header_loggedIn
+        style
+            include order.css
+        
+    body(onload="init()")
+        br
+        select#restaurant-select
+        br
+        br
+        div#info
+        div#main
+            div#left(class="column left")
+            div#middle(class="column middle")
+            div#right(class="column right")
+        
+        script!= `const object = ${JSON.stringify(user)};`
+        script(src="orderform.js")    
+

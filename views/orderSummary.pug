@@ -1,0 +1,26 @@
+html 
+    
+        
+         
+    
+    body
+        if(user.loggedIn==true)
+            include Header_loggedIn
+        else
+            include Header_loggedOut
+
+        
+        h1 Order ##{order._id} made by #{user2.username}
+        br
+        br 
+        p Restaurant Name: #{order.restaurantName}
+        br
+        p Order contents: 
+        each val, key in order.order
+            p #{val.name} x #{val.quantity} 
+        br
+        br
+        p Subtotal: $#{order.subtotal}
+        p Tax: $#{order.tax}
+        p Delivery fee: $#{order.fee}
+        p Total: $#{order.total}

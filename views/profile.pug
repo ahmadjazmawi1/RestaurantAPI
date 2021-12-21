@@ -1,0 +1,29 @@
+html  
+    body 
+        if(session.loggedIn==true)
+            include Header_loggedIn 
+        else
+            include Header_loggedOut  
+
+        h1#name Profile for #{user.username} 
+        br
+        if(privacy == true)
+            br
+            p privacy     
+            input#on(type="radio" name="radio" placeholder="ON" value="true")
+            label(for='true') On                
+            br
+            input#off(type="radio" name="radio" placeholder="OFF" value="false") 
+            label(for='false') Off
+            br
+            input#save(type="button" value="save")
+            script(src ="/changePrivacy.js")
+        h3 order history:
+        each order in orders
+            a(href="/orders/"+order._id) #{order._id}
+            br
+            br
+
+
+      
+   
